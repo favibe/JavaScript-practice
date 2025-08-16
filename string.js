@@ -97,3 +97,16 @@ console.log(reports);
 
 
 
+includes()
+ const displayX = " JavaScript is interesting";
+console.log(displayX.includes("JavaScript")); // returns true. It is case sensitive. So if you changed it to JavaScript it will return false. 
+//substring
+const userName = "Lucas Vanessa Freda";
+const subString = userName.substring(0, 15);
+console.log(subString + "....");
+//use case can be when a user name is too long and you just want to show the first 15 charactes and add.... to it. substring method can be used, and it doesn't modify the first(original) string, it just returns a new string. 
+
+//trim()
+const text = "          Hello there. I am a full stack developer.           ";
+console.log(text.trim());
+// it removes whit space at the beginning and end of a string. This is useful because those spaces are counted and have index, which can cause problems. so trim() is used to remove them. 
