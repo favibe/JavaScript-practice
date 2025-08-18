@@ -85,3 +85,53 @@ coursess.splice(3, 10); // it star from index 3. the 10 represent the length, so
 coursess.splice(3, 0, "Spanish"); // it will add Spanish at index 3.
 
 coursess.splice(3, 1, "Spanish", " Italian"); // it will replace English at index 3 with Spanish and Italian. 
+
+
+
+
+
+
+
+// map and filter() method
+const fruits = ["apple", "mango", "pear", "orange", "banana"];
+function ordered(fruit) {  
+return fruit.toUpperCase();
+}
+const sorted = fruits.map(ordered);
+console.log(sorted);
+//doing this with the array function would be like this:
+/*const fruits = ["apple", "mango", "pear", "orange", "banana"];
+cinst sorted = fruits.map(fruit) => fruit.toUpperCase() */
+//doing it with the while loop
+const numbers =[1, 2,3,4,5];
+const even = [];
+let i = 0;
+while(i < numbers.length) {  
+if (numbers[i] % 2 === 0) {    
+even.push(numbers [i])  
+}  
+i++;
+}
+console.log(even);
+console.log("filter method---");
+const num = [1,2,3,4,5,6,7,8,9];
+function double (number) {  
+return number % 2 === 0;
+}
+const doubled = num.filter(double);
+console.log(doubled);
+// doing it with arrow function
+/*
+const doubled = num.filter(double)  => number % 2 === 0; */
+//doing it with the do-while loop
+const numb = [10, 23,34,47,56,63,70,81,90];
+const evs = [];
+let j = 0;
+do {  
+if (numb[j] % 2 === 0) {    
+evs.push(numb[j])  
+}  
+j++;
+} while (j < numb.length);
+console.log(evs);
+
