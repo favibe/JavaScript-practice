@@ -40,7 +40,7 @@ for (let i = 1; i <= 10; i++) {
 
 
 // print a right angle triangle
-forr(let i=1; i <=5; i++) {
+for(let i=1; i <=5; i++) {
   for(let j=1; j<=i; j++) {
     let i = i * j;     console.log("*");
   }
