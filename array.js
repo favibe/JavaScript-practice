@@ -365,3 +365,13 @@ console.log(arr6.flat(2));
 console.log(arr6.flat(3));
 // [1, 2, 3, 4]
 //flatMap(): it maps each element using a map function, then flattens the result by one level.
+
+
+let array = [1,2,3,4,5];
+function sumOfTripledEven(arrays) {
+  return arrays
+  .filter((num) => num % 2 === 0)
+  .map((num) => num * 3)
+  .reduce((acc, curr)=> acc +curr)
+}
+console.log(sumOfTripledEven(array));
