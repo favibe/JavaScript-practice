@@ -223,3 +223,64 @@ console.log(upperFruits); // ["APPLE", "BANANA", "CHERRY"]
 //sort(): it modifies the original array and returns the sorted array.
 /* Default behavior: it converts everything into strings and sorts lexicographically (dictionary order).
  */
+
+
+
+//sort(): it modifies the original array and returns the sorted array.
+/* Default behavior: it converts everything into strings and sorts lexicographically (dictionary order).
+ */
+
+//sort
+let randomWords = ["sugar", "cone", "alpha", "zebra", "eggs", "air", "aae", "bear", "zipper", "song"];
+randomWords.sort();
+console.log(randomWords);
+let randomNumbers = [1, 122, 102, 12, 23, 56, 47, 4, 6, 7, 98, 5,44, 4, 55, 66, 7, 0, 3, 4, 2, 45,37,23];
+randomNumbers.sort()
+console.log(randomNumbers);
+//this is sorted in lexicographical order, not numerical order.
+//Instead, we do this:
+randomNumbers.sort((a,b) => a - b);
+console.log(randomNumbers);
+// we can do this in reverse order to, this is the way to sort number in ascending order.
+randomNumbers.sort((a,b) => b - a);
+console.log(randomNumbers);
+ // lets sort for an objects
+let randomObjects = [
+  {name: "Fizz", age: 23, gpa: 3.0},
+  {name: "Buzz", age: 27, gpa: 2.0},
+  {name: "Gizz", age: 20, gpa: 1.5},
+  {name: "Duzz", age: 28, gpa: 2.5},
+  {name: "Cizz", age: 25, gpa: 4.0},
+  {name: "Suzz", age: 30, gpa: 3.5}
+];
+//Let sort  by age
+console.log("---age sort---");
+randomObjects.sort((a,b) => a.age - b.age);
+console.log(randomObjects);
+//Let sort  by gpa
+console.log("---gpa sort---");
+randomObjects.sort((a,b) => a.gpa - b.gpa);
+console.log(randomObjects);
+//Let sort  by age in reverse order/ descending order.
+console.log("---age sort reverse---");
+randomObjects.sort((a,b) => b.age - a.age);
+console.log(randomObjects);
+//Let sort  by name
+console.log("---error for name sort---")
+randomObjects.sort((a,b) => a.name - b.name);
+console.log(randomObjects);
+console.log("---correct for name sort---");
+//Let sort  by name
+randomObjects.sort((a,b) => a.name.localeCompare(b.name));
+console.log(randomObjects);
+// language specific sorting
+console.log("--language specific sorting--");
+let wordsx = ["résumé", "resume", "café", "cafe"];
+wordsx.sort((a, b) => a.localeCompare(b));
+console.log(wordsx);
+// ["cafe", "café", "resume", "résumé"]
+//case sensitive sorting
+console.log("--case sensitive sorting---");
+let casse = ["Milk", "boBa", "mango", "apple", "Orange"];
+casse.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+console.log(casse);
