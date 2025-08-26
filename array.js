@@ -284,3 +284,27 @@ console.log("--case sensitive sorting---");
 let casse = ["Milk", "boBa", "mango", "apple", "Orange"];
 casse.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 console.log(casse);
+
+//split(): it split a string into an array of substrings, takes a seperator as an argument and returns an array.
+let str2 = "apple, banana, cherry";
+//split by  comma
+console.log(str2.split(","));
+//split by space
+console.log("I love Javascript".split(" "));
+//limit results
+console.log("one,two,three,four".split(",", 2));
+// Split into characters
+console.log("hello".split(""));
+
+//join(): it joins an array and convert to a string.
+let amount = ["one", "hundred", "thousand","million","billion"];
+//default join
+console.log(amount.join());
+//custom seperator
+console.log(amount.join(" - "));
+//No seperator
+console.log(amount.join(""));
+//new line
+console.log(amount.join("\n"));
+//more examples
+console.log(amount.join("  "));
