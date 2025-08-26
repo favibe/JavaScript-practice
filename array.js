@@ -308,3 +308,19 @@ console.log(amount.join(""));
 console.log(amount.join("\n"));
 //more examples
 console.log(amount.join("  "));
+
+
+//reduce(): it takes a callback function and an inititial value(optional) and return a single value.
+let num4 = [1,2, 3, 4, 5];
+let sum = num4.reduce((acc, curr) => acc + curr, 0);
+console.log(sum);
+//product
+let product = num4.reduce((acc, curr) => acc * curr, 0);
+console.log(product);
+//reduceRight(): it like reduce () but works from right to left.
+let word1 = ["a", "b", "c", "d"];
+let letters1 = word1. reduce((acc, curr) => acc + curr, "");
+console.log(letters1);
+//usong reduceRight
+let letters2 = word1. reduceRight((acc, curr) => acc + curr, "");
+console.log(letters2);
