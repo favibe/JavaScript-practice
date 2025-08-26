@@ -324,3 +324,44 @@ console.log(letters1);
 //usong reduceRight
 let letters2 = word1. reduceRight((acc, curr) => acc + curr, "");
 console.log(letters2);
+
+
+//some(): it returns true if any elememt in the arry satifies the condions, else it returns false.
+let digit = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let ifDigit = digit.some((digit) => digit > 5);
+console.log(ifDigit);
+let numbersx = [1, 3, 5, 7];
+
+console.log(numbersx.some((num) => num % 2 === 0));
+// true if there’s at least one even number
+// false here → no evens
+//every(): it returns true if all element in the array sataisfies the condition, else false.
+let age1 = [20, 25, 30, 35];
+let above18 = age1.every((age1) => age1 >= 18);
+console.log(above18);
+let eqaul18 = age1.every((age1) => age1 < 18);
+console.log(eqaul18);
+console.log("--fill()---");
+//fill(): fills an array with a ststsic value, takes in parameter like value, start, and end.
+let arr5 = [1, 2, 3, 4];
+arr5.fill(0);
+console.log(arr5); 
+// [0, 0, 0, 0]
+
+let arr = [1, 2, 3, 4, 5];
+arr.fill("X", 1, 4); 
+console.log(arr); 
+// [1, "X", "X", "X", 5]
+
+console.log("--copywithin()---");
+//copyWithin(): it copies part of an array to another location in the same array and returns it without modifying its length.
+//flat(): it creates a new array. eg, turning a multi-dimensional array into a one-dimensional array.
+
+let arr6 = [1, [2, [3, [4]]]];
+console.log(arr6.flat(1));
+// [1, 2, [3, [4]]]
+console.log(arr6.flat(2));
+// [1, 2, 3, [4]]
+console.log(arr6.flat(3));
+// [1, 2, 3, 4]
+//flatMap(): it maps each element using a map function, then flattens the result by one level.
