@@ -135,3 +135,91 @@ j++;
 } while (j < numb.length);
 console.log(evs);
 
+//more methods
+
+//unshift(): it's add element at the beginning of an array. it modifies the original array and return the new array...
+let color = ["red", "blue", "green"];
+color.unshift("yellow");
+console.log(color);
+
+//shift(): it removed the first element of an arrry at the beginning. it modifies the array.
+color.shift();
+console.log(color);
+
+// slice(): takes two arguments. the start index and the end index. it doesn't modify the original array. it returns a new array. The end index is not included.
+
+//concat(): it merges two arry together. it returns a new arry, without modifying the original array.
+let concat = color.concat(["purple ", " orange"], "grey");
+console.log(concat);
+
+//iterate: forEach method: it takes a function and iterate through an array.
+let num = [1, 2, 3, 4, 5];
+num.forEach(function (num, index) {
+  console.log(num + "|" + index);
+});
+//using the complete forEach syntax.
+["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+  console.log(`${item} is at index ${index} in ${array}`);
+});
+//searching in an array
+//indexOf(): it returns the index of the specific elememt in the array. if it dosen't exist it returns -1.
+/* using this as an example:
+let num = [1, 2, 3, 4, 5];  */
+console.log(num.indexOf(3)); //2
+console.log(num.indexOf(6)); //-1
+//inccludes(): it returns true if elememts  exist in the array, else it reteuns false.
+console.log(num.includes(4)); // true
+console.log(num.includes(6)); // false
+//lastIndexOf(): it returns the last element in the arry, if it does not exist, returns -1
+console.log(num.lastIndexOf(5)); //4
+
+//find(): it returns the element that satisfies the condition; else, it returns undefined.
+let user = [
+  { id: 1, name: "john" },
+  { id: 2, name: "scar" },
+  { id: 3, name: "Philip" },
+  { id: 4, name: "john" },
+];
+let reusult = user.find(function (item) {
+  return item.id == 1;
+});
+console.log(reusult);
+//or
+let result = user.find((item) => item.id == 1);
+console.log(result);
+//findIndex(): it retunns the index of the elemrnts if the condions are satisfied else it returns -1
+//findLasstIndex(): returns last index of the element else -1.
+let last = user.findLastIndex((item) => item.name == "john");
+console.log(last); // 3
+//filter(): it retuns an array if condition is satisfied, e;se an empty array.
+let fil = user.filter(function (item) {
+  return item.id < 4;
+});
+console.log(fil);
+
+//transform an array
+//map(): it transforms an array. takes a function iterates through the arry and returns a new array.
+console.log("--Basic  transformation");
+let num1 = [1, 2, 3, 4, 5];
+let douNum = num.map(function (num) {
+  return num * 2;
+});
+/* using arrow function 
+let douNum = num.map(num => num *2); 
+*/
+console.log(douNum);
+console.log("---sExtracting properties from objects ---");
+let names = user.map((user) => user.name);
+console.log(names);
+console.log("--Convert Data types---");
+let strNum = ["1", "2", "3", "4", "5", "6"];
+let numNum = strNum.map((str) => Number(str));
+console.log(numNum);
+console.log("--format dtata---");
+let fruitx = ["apple", "banana", "cherry"];
+let upperFruits = fruitx.map((fruitx) => fruitx.toUpperCase());
+
+console.log(upperFruits); // ["APPLE", "BANANA", "CHERRY"]
+//sort(): it modifies the original array and returns the sorted array.
+/* Default behavior: it converts everything into strings and sorts lexicographically (dictionary order).
+ */
