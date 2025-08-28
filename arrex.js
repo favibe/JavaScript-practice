@@ -107,3 +107,49 @@ function reverseStr(strs) {
   .join("");
 }
 console.log(reverseStr("coding"));
+//reverse a string
+function reverseString(str) {
+  let arr = str.split("");
+  arr.reverse();
+  return arr.join("")
+}
+console.log(reverseString("hello"));
+//or
+function reverseStr(strs) {
+  return strs.split("")
+  .reverse()
+  .join("");
+}
+console.log(reverseStr("coding"));
+
+//remove an array
+function removeFromArray(array, ...itemsToRemove) {
+  return array.filter(element => !itemsToRemove.includes(element));
+}
+console.log(removeFromArray([1, 2, 3, 4], 3));
+// → [1, 2, 4]
+//SumofAll
+const sumAll = function(a, b) {
+    let start = Math.min(a,b);
+    let end = Math.max(a,b);
+    let sum = 0;
+    for (let i = start; i <= end; i++) {
+      sum = sum + i;
+
+    }
+    return sum;
+};
+console.log(sumAll(1, 4));
+//this codes works only for positive numbers
+//leapyear
+const leapYears = function(year) {
+  if (year % 400 === 0) {
+    return true;   // Rule 1
+  } else if (year % 100 === 0) {
+    return false;  // Rule 2
+  } else if (year % 4 === 0) {
+    return true;   // Rule 3
+  } else {
+    return false;  // Rule 4
+  }
+};
