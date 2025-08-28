@@ -93,3 +93,17 @@ let strings = [
 let str = unique(strings);
 console.log(str);
 
+//reverse a string
+function reverseString(str) {
+  let arr = str.split("");
+  arr.reverse();
+  return arr.join("")
+}
+console.log(reverseString("hello"));
+//or
+function reverseStr(strs) {
+  return strs.split("")
+  .reverse()
+  .join("");
+}
+console.log(reverseStr("coding"));
