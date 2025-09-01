@@ -21,3 +21,16 @@ btn3.addEventListener("click", () => {
     title.textContent = "HI THERE!";
     title.style.color = "black";
 });
+
+btn4.addEventListener("click", function (e) {
+  alert("Hello World");
+  e.target.style.background = "blue";
+});
+//attaching listeners to  groups of nodes
+const buttons = document.querySelectorAll("button");
+// using forEach Mmethod to iterrate through the button
+buttons.forEach ((button) => {
+    button.addEventListener("click", () => {
+        alert(button.id);
+    });
+});
