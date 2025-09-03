@@ -33,4 +33,37 @@ console.log("blue" in person); //false cause such property name do not exist in 
 //The for...in Loop
 //e.g lets output all the properties in the "person" variable
 
-for (let key in person)
+for (let key in person) {
+    console.log(key);
+    console.log(person[key]);
+}
+//can use another varible name insted of "key" let key.
+
+
+//ordered like an object
+//objects follow there special order. integers are converted to string without change & are in ascending order
+//numbers converted to numbers
+//eg
+let codes = {"49":  "Germany", "41": "Switzerland", "44": "Great Britain", "1": "USA"};
+for(let code in codes) {
+    console.log(code);
+}
+//non-integer properties are listed in creation order.
+console.log("--creation order---")
+let codess = {
+  "+49": "Germany",
+  "+41": "Switzerland",
+  "+44": "Great Britain",
+  "+1": "USA"
+};
+
+for (let code in codess) {
+  console.log(code);   // +49, +41, +44, +1
+  console.log(+code);  // 49, 41, 44, 1 (numeric form again)
+}
+//
+let person1 = {};
+person1.name = "john";
+person1.surname = "smith";
+person1.name = "pete";
+delete person1.name;
