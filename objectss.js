@@ -67,3 +67,21 @@ person1.name = "john";
 person1.surname = "smith";
 person1.name = "pete";
 delete person1.name;
+// excercuise
+//1. Map to names
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+let users = [ john, pete, mary ];
+let names =  users.map(name => name.name);
+console.log(names)
+//map to objects
+let johns = { name: "John", surname: "Smith", id: 1 };
+let petes = { name: "Pete", surname: "Hunt", id: 2 };
+let marys = { name: "Mary", surname: "Key", id: 3 };
+
+let userx = [ johns, petes, marys ];
+let userMapped = userx.map(userx => ({
+    fullname: `${userx.name} ${userx.surname}`,
+    id : userx.id
+}));
