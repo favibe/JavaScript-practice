@@ -17,3 +17,25 @@ Array.prototype.myMap = function(callback) {
 
 const squ = arr.myMap(getSquared);
 console.log(squ);
+
+
+// Polyfills for filter
+
+const arr1 = [1,2,3,4,5,6];
+function getFiltered(number){
+    return number > 3
+};
+
+Array.prototype.myFilter = function(callback) {
+    let temp = [];
+    for (let i =0; i<this.length; i++) {
+        if (callback(this[i])) {
+            temp.push(this[i])
+        }
+    }
+    return temp;
+}
+const fil = arr1.myFilter(getFiltered);
+console.log(result);
+
+
