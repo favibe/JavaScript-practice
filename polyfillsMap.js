@@ -36,6 +36,24 @@ Array.prototype.myFilter = function(callback) {
     return temp;
 }
 const fil = arr1.myFilter(getFiltered);
-console.log(result);
+console.log(fil);
 
 
+//polyfill for reduce
+
+const arr2 = [1, 2, 3, 4, 5, 7];
+
+function getSum(acc, curr) {
+    return acc + curr;
+};
+
+Array.prototype.myReduce = function(callback, initialValue) {
+    let acc = initialValue ? initialValue: this[0];
+    for (let i =initialValue ? 0 : 1; i<this.length; i++){
+        acc = callback.call(this, acc, this[i], i, this)
+    }
+    return acc
+}
+
+const redu = arr.myReduce(getSum)
+console.log(redu);
