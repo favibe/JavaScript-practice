@@ -57,3 +57,6 @@ Array.prototype.myReduce = function(callback, initialValue) {
 
 const redu = arr.myReduce(getSum)
 console.log(redu);
+
+
+//polyfill for flatten
