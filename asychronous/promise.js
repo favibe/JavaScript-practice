@@ -8,3 +8,16 @@ but the codebase should  rather increase verticllly (where promisee $ ---async/a
 ---> Promise  is like a placeholder for a value that you'll get in the future.
 it is crfeated using the new promise() constructor */
 
+let promiseeeee =  function bookHotel(hotelId) {
+  //  stateRequest --->  pending/ fulfilled/ rejected;
+   // response ---> value/error;
+}
+
+const URL = " ";
+
+let promise = fetch(URL);
+promise.then(function(response) {
+    console.log(response);
+})
+
+//.then : is a ,ethod used to get the data 
