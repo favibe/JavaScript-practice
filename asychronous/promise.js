@@ -13,11 +13,18 @@ let promiseeeee =  function bookHotel(hotelId) {
    // response ---> value/error;
 }
 
-const URL = " ";
+const URL = "https://mockdata.prakashsakari.repl.co/user";
 
 let promise = fetch(URL);
-promise.then(function(response) {
-    console.log(response);
+promise
+.then(function () {
+  return response.json();
 })
+.then(function(data) {
+    console.log({data});
+}).catch(function(error){
+  console.log("error occured", error)
+});
 
-//.then : is a ,ethod used to get the data 
+//.then : is a method used to get the data  from the url
+//then only runs after the promise has been resolved
